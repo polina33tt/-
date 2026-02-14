@@ -1,0 +1,125 @@
+/* Сброс */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Фон */
+body {
+    background: linear-gradient(135deg, #ffd1dc, #ff80ab);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Карточка */
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    width: 320px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    animation: fadeIn 0.6s ease;
+}
+
+h1 {
+    color: #ff4081;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 20px;
+    color: #444;
+    font-size: 18px;
+}
+
+/* Кнопки */
+button {
+    border: none;
+    padding: 12px 18px;
+    margin: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.btn-next { background: #ff80ab; color: white; }
+.btn-open { background: #FF69B4; color: white; }
+.btn-no { background: #FF1493; color: white; }
+
+/* Кнопки с картинками */
+.btn-img {
+    background: none;
+    padding: 0;
+    margin: 10px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.btn-img img {
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+}
+
+/* Картинки */
+.preview-img {
+    width: 200px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.small-img {
+    width: 120px;
+    margin-bottom: 15px;
+}
+
+/* Полноэкранный экран */
+.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url("img/я.jpg") no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.overlay-box {
+    background: rgba(255,255,255,0.8);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 22px;
+}
+
+/* Сердца */
+.heart {
+    position: fixed;
+    bottom: -20px;
+    font-size: 20px;
+    animation: floatUp 6s linear infinite;
+}
+
+@keyframes floatUp {
+    from { transform: translateY(0); opacity: 1; }
+    to { transform: translateY(-110vh); opacity: 0; }
+}
+
+@keyframes fadeIn {
+    from {opacity:0; transform: translateY(20px);}
+    to {opacity:1; transform: translateY(0);}
+}
